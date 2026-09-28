@@ -1,22 +1,26 @@
 :root {
-  --bg-color: #f4f4f5;
-  --text-color: #18181b;
+  --bg-color: #f8fafc;
+  --text-color: #0f172a;
+  --text-muted: #475569;
   --card-bg: #ffffff;
-  --card-border: #d4d4d8;
-  --nav-bg: #e4e4e7;
-  --accent-color: #27272a;
-  --accent-hover: #3f3f46;
+  --card-border: #cbd5e1;
+  --nav-bg: #f1f5f9;
+  --accent-color: #0f172a;
+  --accent-text: #ffffff;
+  --accent-hover: #334155;
   --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 [data-theme="dark"] {
-  --bg-color: #09090b;
-  --text-color: #f4f4f5;
-  --card-bg: #121215;
-  --card-border: #27272a;
-  --nav-bg: #18181b;
-  --accent-color: #f4f4f5;
-  --accent-hover: #e4e4e7;
+  --bg-color: #0b0f17;
+  --text-color: #f8fafc;
+  --text-muted: #94a3b8;
+  --card-bg: #131d2e;
+  --card-border: #1e293b;
+  --nav-bg: #131d2e;
+  --accent-color: #f8fafc;
+  --accent-text: #0b0f17;
+  --accent-hover: #cbd5e1;
 }
 
 * {
@@ -29,26 +33,28 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-main);
-  line-height: 1.6;
-  padding: 2rem;
+  line-height: 1.7;
+  padding: 2.5rem;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+/* --- Header & Navigation --- */
 header {
+  max-width: 1000px;
+  margin: 0 auto 3.5rem auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 3rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.25rem;
   border-bottom: 1px solid var(--card-border);
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 1.25rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }
 
@@ -56,78 +62,101 @@ nav a {
   color: var(--text-color);
   text-decoration: none;
   font-weight: 500;
+  font-size: 0.95rem;
 }
 
 nav a:hover, nav a.active {
+  color: var(--text-color);
   text-decoration: underline;
+  text-underline-offset: 6px;
 }
 
 .controls {
   display: flex;
-  gap: 1rem;
+  gap: 0.75rem;
   align-items: center;
 }
 
 button, .btn {
   background-color: var(--accent-color);
-  color: var(--bg-color);
-  border: none;
-  padding: 0.5rem 1rem;
+  color: var(--accent-text);
+  border: 1px solid var(--card-border);
+  padding: 0.55rem 1.15rem;
   font-weight: 600;
+  font-size: 0.9rem;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 6px;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease;
 }
 
 button:hover, .btn:hover {
   background-color: var(--accent-hover);
 }
 
+/* --- Main Layout --- */
 main {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
 }
 
-p {
-  margin-bottom: 1.5rem;
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
 }
 
-/* --- Socials Component --- */
+.action-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+/* --- Fixed Socials Component --- */
 .card-socials {
-  width: fit-content;
+  width: 100%;
+  max-width: 420px;
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 20px;
-  gap: 20px;
-  margin: 2rem 0;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-radius: 8px;
+  margin-top: 1.5rem;
 }
 
 .socialContainer {
-  width: 48px;
-  height: 48px;
-  background-color: var(--accent-color);
+  width: 44px;
+  height: 44px;
+  background-color: var(--nav-bg);
+  border: 1px solid var(--card-border);
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
 }
 
-.containerOne:hover { background-color: #d62976; }
-.containerTwo:hover { background-color: #00acee; }
-.containerThree:hover { background-color: #0072b1; }
-.containerFour:hover { background-color: #128C7E; }
+.containerOne:hover { background-color: #d62976; border-color: #d62976; }
+.containerTwo:hover { background-color: #00acee; border-color: #00acee; }
+.containerThree:hover { background-color: #0072b1; border-color: #0072b1; }
+.containerFour:hover { background-color: #128C7E; border-color: #128C7E; }
 
 .socialContainer:active {
-  transform: scale(0.9);
+  transform: scale(0.95);
 }
 
 .socialSvg {
@@ -135,13 +164,20 @@ p {
 }
 
 .socialSvg path {
-  fill: var(--bg-color);
+  fill: var(--text-color);
+}
+
+.containerOne:hover .socialSvg path,
+.containerTwo:hover .socialSvg path,
+.containerThree:hover .socialSvg path,
+.containerFour:hover .socialSvg path {
+  fill: #ffffff;
 }
 
 /* --- Project Flip Cards --- */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -149,7 +185,7 @@ p {
 .flip-card {
   background-color: transparent;
   width: 100%;
-  height: 280px;
+  height: 300px;
   perspective: 1000px;
 }
 
@@ -158,7 +194,7 @@ p {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.6s;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
 }
 
@@ -172,73 +208,52 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem;
+  padding: 2rem;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
   border: 1px solid var(--card-border);
-  border-radius: 4px;
+  border-radius: 8px;
   background-color: var(--card-bg);
-  color: var(--text-color);
 }
 
 .flip-card-back {
   transform: rotateY(180deg);
-  background-color: var(--accent-color);
-  color: var(--bg-color);
+  background-color: var(--card-bg);
+  text-align: left;
+  align-items: flex-start;
 }
 
 .flip-card-back .btn {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
 
-.flip-card-back .btn:hover {
-  background-color: var(--card-border);
-}
-
-.title {
-  font-size: 1.25rem;
+.card-title {
+  font-size: 1.35rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
-/* --- PDF Viewer --- */
-.pdf-container {
-  width: 100%;
-  height: 650px;
-  border: 1px solid var(--card-border);
-  border-radius: 4px;
-  margin-bottom: 1.5rem;
-  background-color: var(--card-bg);
-}
-
-footer {
-  max-width: 900px;
-  margin: 4rem auto 0;
-  border-top: 1px solid var(--card-border);
-  padding-top: 1.5rem;
-  font-size: 0.85rem;
-  display: flex;
-  justify-content: space-between;
+.card-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
 }
 
 /* --- About Page Layout --- */
 .about-container {
   display: flex;
-  gap: 2.5rem;
+  gap: 3rem;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   flex-wrap: wrap;
 }
 
 .about-image-wrapper {
   flex-shrink: 0;
-  width: 220px;
-  height: 220px;
+  width: 240px;
+  height: 240px;
   border: 1px solid var(--card-border);
-  border-radius: 4px;
+  border-radius: 8px;
   overflow: hidden;
   background-color: var(--card-bg);
 }
@@ -252,5 +267,30 @@ footer {
 
 .about-text {
   flex: 1;
-  min-width: 280px;
+  min-width: 300px;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+/* --- PDF Viewer --- */
+.pdf-container {
+  width: 100%;
+  height: 700px;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  background-color: var(--card-bg);
+}
+
+/* --- Footer --- */
+footer {
+  max-width: 1000px;
+  margin: 5rem auto 0 auto;
+  border-top: 1px solid var(--card-border);
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
