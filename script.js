@@ -1,10 +1,10 @@
-// Theme Switcher Logic
+// Theme Manager
 const themeBtn = document.getElementById('theme-btn');
 const htmlElement = document.documentElement;
 
 const savedTheme = localStorage.getItem('theme') || 'dark';
 htmlElement.setAttribute('data-theme', savedTheme);
-themeBtn.textContent = savedTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+themeBtn.textContent = savedTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
 
 themeBtn.addEventListener('click', () => {
   const currentTheme = htmlElement.getAttribute('data-theme');
@@ -12,17 +12,16 @@ themeBtn.addEventListener('click', () => {
   
   htmlElement.setAttribute('data-theme', newTheme);
   localStorage.setItem('theme', newTheme);
-  themeBtn.textContent = newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+  themeBtn.textContent = newTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
 });
 
-// Persistent Ambient Audio Management
+// Seamless Persistent Audio Manager
 const audio = document.getElementById('ambient-audio');
 const audioBtn = document.getElementById('audio-btn');
 
 if (audio) {
-  audio.volume = 0.25;
+  audio.volume = 0.20;
 
-  // Restore previous playback time and state across page navigations
   const savedTime = sessionStorage.getItem('audioCurrentTime');
   const isPlaying = sessionStorage.getItem('audioPlaying') === 'true';
   const isMuted = sessionStorage.getItem('audioMuted') === 'true';
@@ -32,11 +31,10 @@ if (audio) {
   }
 
   audio.muted = isMuted;
-  audioBtn.textContent = audio.muted ? 'Play Audio' : 'Mute Audio';
+  audioBtn.textContent = audio.muted ? '🔇 Play Audio' : '🔊 Mute Audio';
 
   if (isPlaying && !isMuted) {
     audio.play().catch(() => {
-      // If browser blocks initial resume, unlock on first click anywhere
       const unlockAudio = () => {
         audio.play().catch(() => {});
         document.removeEventListener('click', unlockAudio);
@@ -45,17 +43,16 @@ if (audio) {
     });
   }
 
-  // Continuously save current timestamp so it carries over when clicking links
   setInterval(() => {
     if (!audio.paused) {
       sessionStorage.setItem('audioCurrentTime', audio.currentTime);
     }
-  }, 500);
+  }, 400);
 
   audioBtn.addEventListener('click', () => {
     audio.muted = !audio.muted;
     sessionStorage.setItem('audioMuted', audio.muted);
-    audioBtn.textContent = audio.muted ? 'Play Audio' : 'Mute Audio';
+    audioBtn.textContent = audio.muted ? '🔇 Play Audio' : '🔊 Mute Audio';
     
     if (!audio.muted) {
       audio.play().catch(() => {});
@@ -65,7 +62,6 @@ if (audio) {
     }
   });
 
-  // Track play/pause state changes
   audio.addEventListener('play', () => sessionStorage.setItem('audioPlaying', 'true'));
   audio.addEventListener('pause', () => sessionStorage.setItem('audioPlaying', 'false'));
 }
