@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethan Walton - Starred Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="controls">
+      <button id="audio-btn">Mute Audio</button>
+      <button id="theme-btn">Light Mode</button>
+    </div>
+  </header>
+
+  <main>
+    <h1>Starred GitHub Projects</h1>
+    <p>Hover over a card to view repository details.</p>
+
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <p class="title">Local-LLM</p>
+            <p>Hover to view</p>
+          </div>
+          <div class="flip-card-back">
+            <p class="title">Local-LLM</p>
+            <p>Running and managing local large language models securely on consumer hardware.</p>
+            <a href="https://github.com/Ethan-Walton/Local-LLM" target="_blank" class="btn">View</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <p class="title">Data Structures & Algorithms</p>
+            <p>Hover to view</p>
+          </div>
+          <div class="flip-card-back">
+            <p class="title">DSA Repository</p>
+            <p>Core algorithmic implementations and data structure design optimizations.</p>
+            <a href="https://github.com/Ethan-Walton/Data-Structures-and-Algorithms" target="_blank" class="btn">View</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <p class="title">Info-Security</p>
+            <p>Hover to view</p>
+          </div>
+          <div class="flip-card-back">
+            <p class="title">Info-Security</p>
+            <p>Cybersecurity lab projects, threat evaluation scripts, and defensive controls.</p>
+            <a href="https://github.com/Ethan-Walton/Info-Security" target="_blank" class="btn">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Ethan Walton</p>
+    <audio id="ambient-audio" src="audio/ambient.mp3" loop autoplay></audio>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

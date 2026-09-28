@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethan Walton - Resume</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html" class="active">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="controls">
+      <button id="audio-btn">Mute Audio</button>
+      <button id="theme-btn">Light Mode</button>
+    </div>
+  </header>
+
+  <main>
+    <h1>Resume</h1>
+    <p>View the interactive document below or download a copy directly.</p>
+    
+    <div style="margin-bottom: 1.5rem;">
+      <a href="resume.pdf" class="btn" download>Download Resume PDF</a>
+    </div>
+
+    <!-- Interactive PDF Viewer Element -->
+    <iframe src="resume.pdf" class="pdf-container" title="Ethan Walton Resume">
+      <p>Your browser does not support embedded PDFs. Please use the download button above.</p>
+    </iframe>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Ethan Walton</p>
+    <audio id="ambient-audio" src="audio/ambient.mp3" loop autoplay></audio>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
