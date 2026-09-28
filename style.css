@@ -5,14 +5,14 @@
   --surface: #0b0f19;
   --surface-glass: rgba(11, 15, 25, 0.75);
   --border: #1e293b;
-  --border-glow: rgba(0, 240, 255, 0.4);
+  --border-glow: rgba(16, 185, 129, 0.4);
   --text: #f8fafc;
   --text-muted: #94a3b8;
-  --neon-cyan: #00f0ff;
-  --neon-violet: #a855f7;
+  --neon-cyan: #10b981; /* Shifted to Emerald Green */
+  --neon-violet: #f59e0b; /* Shifted to Golden Amber */
   --font-sans: 'Plus Jakarta Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
-  --shadow-neon: 0 0 25px rgba(0, 240, 255, 0.15);
+  --shadow-neon: 0 0 25px rgba(16, 185, 129, 0.15);
 }
 
 [data-theme="light"] {
@@ -20,12 +20,12 @@
   --surface: #ffffff;
   --surface-glass: rgba(255, 255, 255, 0.85);
   --border: #cbd5e1;
-  --border-glow: rgba(37, 99, 235, 0.4);
+  --border-glow: rgba(5, 150, 105, 0.4);
   --text: #0f172a;
   --text-muted: #64748b;
-  --neon-cyan: #2563eb;
-  --neon-violet: #7c3aed;
-  --shadow-neon: 0 0 25px rgba(37, 99, 235, 0.15);
+  --neon-cyan: #059669;
+  --neon-violet: #d97706;
+  --shadow-neon: 0 0 25px rgba(5, 150, 105, 0.15);
 }
 
 * {
@@ -45,8 +45,8 @@ body {
   padding: 0 1.5rem;
   overflow-x: hidden;
   background-image: 
-    radial-gradient(circle at 10% 20%, rgba(0, 240, 255, 0.03) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.03) 0%, transparent 40%);
+    radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.03) 0%, transparent 40%);
 }
 
 /* --- Cyber Navigation Bar --- */
@@ -119,7 +119,7 @@ button, .btn {
 button:hover, .btn:hover {
   border-color: var(--neon-cyan);
   color: var(--neon-cyan);
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.25);
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
   transform: translateY(-2px);
 }
 
@@ -338,7 +338,7 @@ h1 {
   border: 2px solid var(--neon-cyan);
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 0 30px rgba(0, 240, 255, 0.2);
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.2);
   background-color: var(--surface);
 }
 
