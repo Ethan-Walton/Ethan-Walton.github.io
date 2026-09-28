@@ -15,23 +15,38 @@ themeBtn.addEventListener('click', () => {
   themeBtn.textContent = newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
 });
 
-// Ambient Audio Mute/Unmute Logic
+// Ambient Audio Management
 const audio = document.getElementById('ambient-audio');
 const audioBtn = document.getElementById('audio-btn');
 
 if (audio) {
-  audio.volume = 0.3;
+  audio.volume = 0.25;
   
+  // Check user preference
   const isMuted = sessionStorage.getItem('audioMuted') === 'true';
   if (isMuted) {
     audio.muted = true;
     audioBtn.textContent = 'Play Audio';
+  } else {
+    // Attempt automatic playback; browsers block this unless interacted with,
+    // so we catch the error and enable playback on the first page click.
+    audio.play().catch(() => {
+      const startAudioOnClick = () => {
+        if (!audio.muted) {
+          audio.play().catch(() => {});
+        }
+        document.removeEventListener('click', startAudioOnClick);
+      };
+      document.addEventListener('click', startAudioOnClick);
+    });
   }
 
   audioBtn.addEventListener('click', () => {
     audio.muted = !audio.muted;
     sessionStorage.setItem('audioMuted', audio.muted);
     audioBtn.textContent = audio.muted ? 'Play Audio' : 'Mute Audio';
-    if (!audio.muted) audio.play().catch(() => {});
+    if (!audio.muted) {
+      audio.play().catch(() => {});
+    }
   });
 }
