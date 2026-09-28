@@ -4,7 +4,7 @@ const htmlElement = document.documentElement;
 
 const savedTheme = localStorage.getItem('theme') || 'dark';
 htmlElement.setAttribute('data-theme', savedTheme);
-themeBtn.textContent = savedTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
+themeBtn.textContent = savedTheme === 'dark' ? '⚡ Cyber Dark' : '☀️ Light Mode';
 
 themeBtn.addEventListener('click', () => {
   const currentTheme = htmlElement.getAttribute('data-theme');
@@ -12,10 +12,10 @@ themeBtn.addEventListener('click', () => {
   
   htmlElement.setAttribute('data-theme', newTheme);
   localStorage.setItem('theme', newTheme);
-  themeBtn.textContent = newTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
+  themeBtn.textContent = newTheme === 'dark' ? '⚡ Cyber Dark' : '☀️ Light Mode';
 });
 
-// Seamless Persistent Audio Manager
+// Persistent Ambient Audio Engine
 const audio = document.getElementById('ambient-audio');
 const audioBtn = document.getElementById('audio-btn');
 
@@ -31,7 +31,7 @@ if (audio) {
   }
 
   audio.muted = isMuted;
-  audioBtn.textContent = audio.muted ? '🔇 Play Audio' : '🔊 Mute Audio';
+  audioBtn.textContent = audio.muted ? '🔇 Audio Muted' : '🔊 Audio Active';
 
   if (isPlaying && !isMuted) {
     audio.play().catch(() => {
@@ -52,7 +52,7 @@ if (audio) {
   audioBtn.addEventListener('click', () => {
     audio.muted = !audio.muted;
     sessionStorage.setItem('audioMuted', audio.muted);
-    audioBtn.textContent = audio.muted ? '🔇 Play Audio' : '🔊 Mute Audio';
+    audioBtn.textContent = audio.muted ? '🔇 Audio Muted' : '🔊 Audio Active';
     
     if (!audio.muted) {
       audio.play().catch(() => {});
