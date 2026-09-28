@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ethan Walton - Resume</title>
+  <title>Ethan Walton // Resume</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,28 +18,65 @@
       </ul>
     </nav>
     <div class="controls">
-      <button id="audio-btn">Mute Audio</button>
-      <button id="theme-btn">Light Mode</button>
+      <button id="audio-btn">🔊 Audio Active</button>
+      <button id="theme-btn">⚡ Cyber Dark</button>
     </div>
   </header>
 
   <main>
-    <h1>Resume</h1>
-    <p>View the interactive document below or download a copy directly.</p>
-    
-    <div style="margin-bottom: 1.5rem;">
-      <a href="resume.pdf" class="btn" download>Download Resume PDF</a>
+    <div class="system-status">DATA_RECORD // CURRICULUM_VITAE</div>
+    <h1>Secure Resume</h1>
+    <p class="subtitle">&gt; Professional experience, technical stack, and leadership credentials.</p>
+
+    <div style="display: flex; gap: 1rem; margin-bottom: 2.5rem; flex-wrap: wrap;">
+      <a href="#" class="btn btn-primary">Download PDF CV</a>
     </div>
 
-    <!-- Interactive PDF Viewer Element -->
-    <iframe src="resume.pdf" class="pdf-container" title="Ethan Walton Resume">
-      <p>Your browser does not support embedded PDFs. Please use the download button above.</p>
-    </iframe>
+    <div style="display: grid; gap: 2rem;">
+      <!-- Experience Section -->
+      <div style="background: var(--surface); border: 1px solid var(--border); padding: 2.5rem; border-radius: 20px; box-shadow: var(--shadow-neon);">
+        <h3 style="font-family: var(--font-mono); color: var(--neon-cyan); margin-bottom: 1.5rem; font-size: 1.25rem;">// Professional Experience</h3>
+        
+        <div style="margin-bottom: 2rem;">
+          <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 0.5rem;">
+            <strong style="font-size: 1.1rem; color: var(--text);">Operations Leader & Team Manager</strong>
+            <span style="font-family: var(--font-mono); color: var(--neon-violet); font-size: 0.85rem;">2024 - Present</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.75rem;">Staff Scheduling & Business Operations</p>
+          <ul style="color: var(--text-muted); padding-left: 1.25rem; font-size: 0.95rem; line-height: 1.6;">
+            <li>Direct staff scheduling, daily workflow optimization, and team management protocols under high-pressure environments.</li>
+            <li>Streamlined operational bottlenecks, improving cross-functional team coordination and customer communication.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 0.5rem;">
+            <strong style="font-size: 1.1rem; color: var(--text);">UX Design & Marketing Entrepreneur</strong>
+            <span style="font-family: var(--font-mono); color: var(--neon-violet); font-size: 0.85rem;">2022 - Present</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.75rem;">Digital Strategy & Product Design</p>
+          <ul style="color: var(--text-muted); padding-left: 1.25rem; font-size: 0.95rem; line-height: 1.6;">
+            <li>Designed intuitive user interfaces and user experiences to maximize user engagement and conversion metrics.</li>
+            <li>Developed and executed targeted marketing campaigns, combining analytical logic with creative execution.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Education Section -->
+      <div style="background: var(--surface); border: 1px solid var(--border); padding: 2.5rem; border-radius: 20px; box-shadow: var(--shadow-neon);">
+        <h3 style="font-family: var(--font-mono); color: var(--neon-cyan); margin-bottom: 1.5rem; font-size: 1.25rem;">// Education & Credentials</h3>
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 0.5rem;">
+          <strong style="font-size: 1.1rem; color: var(--text);">Cybersecurity & IT Student</strong>
+          <span style="font-family: var(--font-mono); color: var(--neon-violet); font-size: 0.85rem;">Expected 2027</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Focus: Network Security, Information Systems, and Infrastructure Hardening.</p>
+      </div>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2026 Ethan Walton</p>
-    <audio id="ambient-audio" src="audio/ambient.mp3" loop autoplay></audio>
+    <p>&copy; 2026 ETHAN WALTON // ALL RIGHTS RESERVED</p>
+    <audio id="ambient-audio" src="audio/ambient.mp3" loop></audio>
   </footer>
 
   <script src="script.js"></script>
