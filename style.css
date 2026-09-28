@@ -47,7 +47,7 @@ body {
   padding: 0 1.5rem;
 }
 
-/* --- Glassmorphic Sticky Header --- * /
+/* --- Glassmorphic Sticky Header --- */
 header {
   position: sticky;
   top: 0;
