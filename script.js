@@ -15,38 +15,57 @@ themeBtn.addEventListener('click', () => {
   themeBtn.textContent = newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
 });
 
-// Ambient Audio Management
+// Persistent Ambient Audio Management
 const audio = document.getElementById('ambient-audio');
 const audioBtn = document.getElementById('audio-btn');
 
 if (audio) {
   audio.volume = 0.25;
-  
-  // Check user preference
+
+  // Restore previous playback time and state across page navigations
+  const savedTime = sessionStorage.getItem('audioCurrentTime');
+  const isPlaying = sessionStorage.getItem('audioPlaying') === 'true';
   const isMuted = sessionStorage.getItem('audioMuted') === 'true';
-  if (isMuted) {
-    audio.muted = true;
-    audioBtn.textContent = 'Play Audio';
-  } else {
-    // Attempt automatic playback; browsers block this unless interacted with,
-    // so we catch the error and enable playback on the first page click.
+
+  if (savedTime) {
+    audio.currentTime = parseFloat(savedTime);
+  }
+
+  audio.muted = isMuted;
+  audioBtn.textContent = audio.muted ? 'Play Audio' : 'Mute Audio';
+
+  if (isPlaying && !isMuted) {
     audio.play().catch(() => {
-      const startAudioOnClick = () => {
-        if (!audio.muted) {
-          audio.play().catch(() => {});
-        }
-        document.removeEventListener('click', startAudioOnClick);
+      // If browser blocks initial resume, unlock on first click anywhere
+      const unlockAudio = () => {
+        audio.play().catch(() => {});
+        document.removeEventListener('click', unlockAudio);
       };
-      document.addEventListener('click', startAudioOnClick);
+      document.addEventListener('click', unlockAudio);
     });
   }
+
+  // Continuously save current timestamp so it carries over when clicking links
+  setInterval(() => {
+    if (!audio.paused) {
+      sessionStorage.setItem('audioCurrentTime', audio.currentTime);
+    }
+  }, 500);
 
   audioBtn.addEventListener('click', () => {
     audio.muted = !audio.muted;
     sessionStorage.setItem('audioMuted', audio.muted);
     audioBtn.textContent = audio.muted ? 'Play Audio' : 'Mute Audio';
+    
     if (!audio.muted) {
       audio.play().catch(() => {});
+      sessionStorage.setItem('audioPlaying', 'true');
+    } else {
+      sessionStorage.setItem('audioPlaying', 'false');
     }
   });
+
+  // Track play/pause state changes
+  audio.addEventListener('play', () => sessionStorage.setItem('audioPlaying', 'true'));
+  audio.addEventListener('pause', () => sessionStorage.setItem('audioPlaying', 'false'));
 }
