@@ -2,7 +2,7 @@
 const themeBtn = document.getElementById('theme-btn');
 const htmlElement = document.documentElement;
 
-const savedTheme = localStorage.getItem('theme') || 'dark';
+const savedTheme = localStorage.getItem('theme') || 'light';
 htmlElement.setAttribute('data-theme', savedTheme);
 themeBtn.textContent = savedTheme === 'dark' ? '⚡ Cyber Dark' : '☀️ Light Mode';
 
