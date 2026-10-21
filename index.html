@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +8,9 @@
 </head>
 <body>
   <header>
-    <nav>
+    <nav aria-label="Primary navigation">
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="resume.html">Resume</a></li>
@@ -18,18 +18,17 @@
       </ul>
     </nav>
     <div class="controls">
-      <button id="theme-btn">⚡ Cyber Dark</button>
+      <button id="theme-btn" type="button">Switch theme</button>
     </div>
   </header>
 
   <main>
-    <div class="system-status">SYS_ONLINE // SECURE_NODE_01</div>
     <h1>Ethan Walton</h1>
-    <p class="subtitle">&gt; Cybersecurity & IT Student | Operations Leader | UX & Marketing Entrepreneur</p>
+    <p class="subtitle">Operations Leader | UX & Marketing Entrepreneur | Cybersecurity & IT Student</p>
 
     <div class="action-row">
-      <a href="resume.html" class="btn btn-primary">View Secure Resume</a>
-      <a href="https://cash.app/$JedidiahBlitz" target="_blank" class="btn">Support Core</a>
+      <a href="resume.html" class="btn btn-primary">View Resume</a>
+      <a href="contact.html" class="btn">Contact Me</a>
     </div>
 
     <!-- Socials Tray -->

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
@@ -10,24 +10,23 @@
 
 <body>
   <header>
-    <nav>
+    <nav aria-label="Primary navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="about.html" class="active" aria-current="page">About</a></li>
         <li><a href="resume.html">Resume</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
     <div class="controls">
-      <button id="theme-btn">⚡ Cyber Dark</button>
+      <button id="theme-btn" type="button">Switch theme</button>
     </div>
   </header>
 
   <main>
-    <div class="system-status">PROFILE_LOG // BIO_DATA</div>
     <h1>About Me</h1>
-    <p class="subtitle">&gt; Core background and operational leadership profile</p>
+    <p class="subtitle">Core background and operational leadership profile</p>
 
     <div class="about-container">
       <div class="about-image-wrapper">
@@ -40,20 +39,20 @@
           organizing people and processes, solving problems under pressure, and communicating clearly with both
           employees and customers.
         </p>
-      </div>
-    </div>
 
-    <div class="mac-terminal" aria-hidden="true">
-      <div class="mac-terminal-bar">
-        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-        <span class="mac-terminal-title">ethan &mdash; zsh &mdash; 80&times;24</span>
-      </div>
-      <div class="mac-terminal-body">
-        <div><span class="prompt">ethan@mac ~ %</span> whoami</div>
-        <div>Ethan Walton</div>
-        <div><span class="prompt">ethan@mac ~ %</span> cat focus.txt</div>
-        <div>Cybersecurity &amp; IT | Operations | UX &amp; Marketing</div>
-        <div><span class="prompt">ethan@mac ~ %</span> <span class="cursor"></span></div>
+        <div class="mac-terminal" aria-hidden="true">
+          <div class="mac-terminal-bar">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="mac-terminal-title">ethan &mdash; zsh &mdash; 80&times;24</span>
+          </div>
+          <div class="mac-terminal-body">
+            <div><span class="prompt">ethan@mac ~ %</span> whoami</div>
+            <div>Ethan Walton</div>
+            <div><span class="prompt">ethan@mac ~ %</span> cat focus.txt</div>
+            <div>Cybersecurity &amp; IT | Operations | UX &amp; Marketing</div>
+            <div><span class="prompt">ethan@mac ~ %</span> <span class="cursor"></span></div>
+          </div>
+        </div>
       </div>
     </div>
 

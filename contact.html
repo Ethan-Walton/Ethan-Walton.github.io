@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,36 +8,35 @@
 </head>
 <body>
   <header>
-    <nav>
+    <nav aria-label="Primary navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
       </ul>
     </nav>
     <div class="controls">
-      <button id="theme-btn">⚡ Cyber Dark</button>
+      <button id="theme-btn" type="button">Switch theme</button>
     </div>
   </header>
 
   <main>
-    <div class="system-status">COMMS_LINK // OPEN</div>
     <h1>Get in Touch</h1>
-    <p class="subtitle">&gt; Establish direct communication or query secure channels.</p>
+    <p class="subtitle">Choose the best channel to get in touch.</p>
 
     <div class="contact-grid">
       <a href="mailto:Ethan.Walton1@outlook.com" class="contact-card">
-        <h3>// Direct Email</h3>
+        <h3>Direct Email</h3>
         <p>Ethan.Walton1@outlook.com</p>
       </a>
-      <a href="https://github.com/Ethan-Walton" target="_blank" class="contact-card">
-        <h3>// GitHub Profile</h3>
+      <a href="https://github.com/Ethan-Walton" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <h3>GitHub Profile</h3>
         <p>Explore code repositories and contributions</p>
       </a>
-      <a href="https://cash.app/$JedidiahBlitz" target="_blank" class="contact-card">
-        <h3>// Support Node</h3>
+      <a href="https://cash.app/$JedidiahBlitz" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <h3>Support My Work</h3>
         <p>Send direct tips via Cash App</p>
       </a>
     </div>

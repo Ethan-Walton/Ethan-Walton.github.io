@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
@@ -10,24 +10,23 @@
 
 <body>
   <header>
-    <nav>
+    <nav aria-label="Primary navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="resume.html" class="active">Resume</a></li>
+        <li><a href="resume.html" class="active" aria-current="page">Resume</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
     <div class="controls">
-      <button id="theme-btn">⚡ Cyber Dark</button>
+      <button id="theme-btn" type="button">Switch theme</button>
     </div>
   </header>
 
   <main>
-    <div class="system-status">DATA_RECORD</div>
     <h1>Resume</h1>
-  <p class="subtitle">&gt; Professional experience and leadership credentials.</p>
+  <p class="subtitle">Professional experience and leadership credentials.</p>
 
   <div class="action-row" style="margin-bottom: 1.5rem;">
     <a href="resume.pdf" class="btn btn-primary" download="Ethan_Walton_Resume.pdf">Download Resume</a>
