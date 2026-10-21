@@ -1,51 +1,77 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ethan Walton // Contact</title>
+  <meta name="description" content="Contact Ethan Walton or explore his professional profiles.">
+  <meta name="theme-color" content="#090a12">
+  <title>Contact | Ethan Walton</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav aria-label="Primary navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="controls">
-      <button id="theme-btn" type="button">Switch theme</button>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="index.html" aria-label="Ethan Walton, home">
+        <span class="brand-mark" aria-hidden="true">EW</span>
+        <span class="brand-copy">
+          <span class="brand-name">Ethan Walton</span>
+          <span class="brand-description">Professional portfolio</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme">
+        <span class="theme-indicator" aria-hidden="true"></span>
+        <span data-theme-label>Light theme</span>
+      </button>
     </div>
+    <div class="scroll-current" aria-hidden="true"><span></span></div>
   </header>
 
-  <main>
-    <h1>Get in Touch</h1>
-    <p class="subtitle">Choose the best channel to get in touch.</p>
+  <main class="site-main page-main" id="main">
+    <header class="page-intro">
+      <h1 class="page-title">Get in touch</h1>
+      <p class="page-lede">Choose the best channel to get in touch.</p>
+    </header>
 
-    <div class="contact-grid">
-      <a href="mailto:Ethan.Walton1@outlook.com" class="contact-card">
-        <h3>Direct Email</h3>
-        <p>Ethan.Walton1@outlook.com</p>
-      </a>
-      <a href="https://github.com/Ethan-Walton" target="_blank" rel="noopener noreferrer" class="contact-card">
-        <h3>GitHub Profile</h3>
-        <p>Explore code repositories and contributions</p>
-      </a>
-      <a href="https://cash.app/$JedidiahBlitz" target="_blank" rel="noopener noreferrer" class="contact-card">
-        <h3>Support My Work</h3>
-        <p>Send direct tips via Cash App</p>
-      </a>
-    </div>
+    <ul class="contact-routes">
+      <li>
+        <a class="contact-route" href="mailto:Ethan.Walton1@outlook.com">
+          <h2>Direct email</h2>
+          <p>Ethan.Walton1@outlook.com</p>
+          <span class="action-arrow" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li>
+        <a class="contact-route" href="https://github.com/Ethan-Walton" target="_blank" rel="noopener noreferrer">
+          <h2>GitHub profile</h2>
+          <p>Explore code repositories and contributions</p>
+          <span class="action-arrow" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li>
+        <a class="contact-route" href="https://cash.app/$JedidiahBlitz" target="_blank" rel="noopener noreferrer">
+          <h2>Support my work</h2>
+          <p>Send direct tips via Cash App</p>
+          <span class="action-arrow" aria-hidden="true"></span>
+        </a>
+      </li>
+    </ul>
   </main>
 
-  <footer>
-    <p>&copy; 2026 ETHAN WALTON // ALL RIGHTS RESERVED</p>
+  <footer class="site-footer">
+    <p>&copy; 2026 Ethan Walton. All rights reserved.</p>
+    <a class="footer-link" href="projects.html">Explore projects</a>
   </footer>
-
+  <span class="visually-hidden" data-theme-announcement aria-live="polite"></span>
   <script src="script.js"></script>
 </body>
 </html>

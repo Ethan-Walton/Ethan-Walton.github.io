@@ -1,68 +1,82 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ethan Walton // About</title>
+  <meta name="description" content="Learn about Ethan Walton's experience in operations, UX and marketing, and cybersecurity and IT.">
+  <meta name="theme-color" content="#090a12">
+  <title>About | Ethan Walton</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header>
-    <nav aria-label="Primary navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="about.html" class="active" aria-current="page">About</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="controls">
-      <button id="theme-btn" type="button">Switch theme</button>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="index.html" aria-label="Ethan Walton, home">
+        <span class="brand-mark" aria-hidden="true">EW</span>
+        <span class="brand-copy">
+          <span class="brand-name">Ethan Walton</span>
+          <span class="brand-description">Professional portfolio</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme">
+        <span class="theme-indicator" aria-hidden="true"></span>
+        <span data-theme-label>Light theme</span>
+      </button>
     </div>
+    <div class="scroll-current" aria-hidden="true"><span></span></div>
   </header>
 
-  <main>
-    <h1>About Me</h1>
-    <p class="subtitle">Core background and operational leadership profile</p>
+  <main class="site-main page-main" id="main">
+    <header class="page-intro">
+      <h1 class="page-title">About Ethan</h1>
+      <p class="page-lede">A background in operational leadership, UX, and marketing, alongside cybersecurity and IT studies.</p>
+    </header>
 
-    <div class="about-container">
-      <div class="about-image-wrapper">
-        <img src="profile.jpg" alt="Ethan Walton" class="profile-img">
-      </div>
-      <div class="about-text">
-        <p>
-          Cybersecurity/IT student with hands-on leadership experience in staff scheduling, team management, and
-          business operations, combined with entrepreneurial experience in UX design and marketing. Skilled at
-          organizing people and processes, solving problems under pressure, and communicating clearly with both
-          employees and customers.
-        </p>
+    <section class="about-layout" aria-label="Ethan Walton's background">
+      <figure class="profile-figure">
+        <img class="profile-photo" src="profile.jpg" alt="Portrait of Ethan Walton" width="640" height="800">
+        <figcaption>Ethan Walton</figcaption>
+      </figure>
+      <div class="about-copy">
+        <p>Cybersecurity/IT student with hands-on leadership experience in staff scheduling, team management, and business operations, combined with entrepreneurial experience in UX design and marketing. Skilled at organizing people and processes, solving problems under pressure, and communicating clearly with both employees and customers.</p>
 
-        <div class="mac-terminal" aria-hidden="true">
-          <div class="mac-terminal-bar">
-            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-            <span class="mac-terminal-title">ethan &mdash; zsh &mdash; 80&times;24</span>
-          </div>
-          <div class="mac-terminal-body">
-            <div><span class="prompt">ethan@mac ~ %</span> whoami</div>
-            <div>Ethan Walton</div>
-            <div><span class="prompt">ethan@mac ~ %</span> cat focus.txt</div>
-            <div>Cybersecurity &amp; IT | Operations | UX &amp; Marketing</div>
-            <div><span class="prompt">ethan@mac ~ %</span> <span class="cursor"></span></div>
-          </div>
+        <div class="focus-notes">
+          <section class="focus-note">
+            <h2>Operations &amp; leadership</h2>
+            <p>Staff scheduling, team management, and business operations.</p>
+          </section>
+          <section class="focus-note">
+            <h2>UX &amp; marketing</h2>
+            <p>Entrepreneurial experience in UX design and marketing.</p>
+          </section>
+          <section class="focus-note">
+            <h2>Cybersecurity &amp; IT</h2>
+            <p>Current studies and hands-on project work.</p>
+          </section>
+        </div>
+
+        <div class="about-action">
+          <a class="button button-primary" href="resume.html">Read my resume <span class="action-arrow" aria-hidden="true"></span></a>
         </div>
       </div>
-    </div>
-
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 ETHAN WALTON // ALL RIGHTS RESERVED</p>
+  <footer class="site-footer">
+    <p>&copy; 2026 Ethan Walton. All rights reserved.</p>
+    <a class="footer-link" href="contact.html">Get in touch</a>
   </footer>
-
+  <span class="visually-hidden" data-theme-announcement aria-live="polite"></span>
   <script src="script.js"></script>
 </body>
-
 </html>

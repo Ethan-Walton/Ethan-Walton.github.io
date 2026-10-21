@@ -1,102 +1,97 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ethan Walton // Repositories</title>
+  <meta name="description" content="Selected software, security, and problem-solving projects by Ethan Walton.">
+  <meta name="theme-color" content="#090a12">
+  <title>Projects | Ethan Walton</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav aria-label="Primary navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="controls">
-      <button id="theme-btn" type="button">Switch theme</button>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="index.html" aria-label="Ethan Walton, home">
+        <span class="brand-mark" aria-hidden="true">EW</span>
+        <span class="brand-copy">
+          <span class="brand-name">Ethan Walton</span>
+          <span class="brand-description">Professional portfolio</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme">
+        <span class="theme-indicator" aria-hidden="true"></span>
+        <span data-theme-label>Light theme</span>
+      </button>
     </div>
+    <div class="scroll-current" aria-hidden="true"><span></span></div>
   </header>
 
-  <main>
-    <h1>Selected Projects</h1>
-    <p class="subtitle">Selected projects in software, security, and problem solving.</p>
+  <main class="site-main page-main" id="main">
+    <header class="page-intro">
+      <h1 class="page-title">Selected projects</h1>
+      <p class="page-lede">Selected projects in software, security, and problem solving. Open a project to read more and follow its link.</p>
+    </header>
 
-    <div class="projects-grid">
-      <!-- Project 1 -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <div>
-              <h3 class="card-title">ETSU's Tutoring Website</h3>
-              <p class="card-desc">A full redesign of a universities website, following accessability requirements.</p>
-            </div>
-            <span class="badge">&gt; Hover to inspect</span>
-          </div>
-          <div class="flip-card-back">
-            <div>
-              <h3 class="card-title">ETSU's Tutoring Website</h3>
-              <p class="card-desc">A redesign of the tutoring website, starting from scratch, and implementing accessability rules and more efficient layouts.</p>
-            </div>
-<<<<<<< HEAD
-            <a href="https://github.com/Ethan-Walton/Procedural-Generation/tree/main/2D%20Project" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Inspect Source</a>
-=======
-            <a href="https://www.etsu.edu/students/learning/" target="_blank" class="btn btn-primary">Inspect Source</a>
->>>>>>> aacef625f849b9998da0b7d96330a57fdcb4dd2f
-          </div>
+    <section class="projects-list" aria-label="Project details">
+      <details class="project-entry">
+        <summary>
+          <span class="project-summary">
+            <span class="project-summary-title" role="heading" aria-level="2">ETSU&rsquo;s Tutoring Website</span>
+            <span class="project-summary-description">A full redesign of a university tutoring website, following accessibility requirements.</span>
+          </span>
+          <span class="project-toggle"><span class="project-toggle-label" data-disclosure-label>Explore</span><span class="disclosure-mark" aria-hidden="true"></span></span>
+        </summary>
+        <div class="project-detail">
+          <p>A redesign of the tutoring website, starting from scratch and implementing accessibility rules and more efficient layouts.</p>
+          <a class="inline-action" href="https://www.etsu.edu/students/learning/" target="_blank" rel="noopener noreferrer">Visit ETSU Learning Services <span class="action-arrow" aria-hidden="true"></span></a>
         </div>
-      </div>
+      </details>
 
-      <!-- Project 2 -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <div>
-              <h3 class="card-title">Data Structures & Algos</h3>
-              <p class="card-desc">Performance Optimization</p>
-            </div>
-            <span class="badge">&gt; Hover to inspect</span>
-          </div>
-          <div class="flip-card-back">
-            <div>
-              <h3 class="card-title">DSA Repository</h3>
-              <p class="card-desc">Core algorithmic design paradigms, tree balancing routines, and efficiency metrics.</p>
-            </div>
-            <a href="https://github.com/Ethan-Walton/Data-Structures-and-Algorithms" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Inspect Source</a>
-          </div>
+      <details class="project-entry">
+        <summary>
+          <span class="project-summary">
+            <span class="project-summary-title" role="heading" aria-level="2">Data Structures &amp; Algorithms</span>
+            <span class="project-summary-description">Performance optimization.</span>
+          </span>
+          <span class="project-toggle"><span class="project-toggle-label" data-disclosure-label>Explore</span><span class="disclosure-mark" aria-hidden="true"></span></span>
+        </summary>
+        <div class="project-detail">
+          <p>Core algorithmic design paradigms, tree balancing routines, and efficiency metrics.</p>
+          <a class="inline-action" href="https://github.com/Ethan-Walton/Data-Structures-and-Algorithms" target="_blank" rel="noopener noreferrer">View the DSA repository <span class="action-arrow" aria-hidden="true"></span></a>
         </div>
-      </div>
+      </details>
 
-      <!-- Project 3 -->
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <div>
-              <h3 class="card-title">Info-Security</h3>
-              <p class="card-desc">Defensive Controls & Labs</p>
-            </div>
-            <span class="badge">&gt; Hover to inspect</span>
-          </div>
-          <div class="flip-card-back">
-            <div>
-              <h3 class="card-title">Info-Security</h3>
-              <p class="card-desc">Security auditing scripts, vulnerability mitigation workflows, and penetration frameworks.</p>
-            </div>
-            <a href="https://github.com/Ethan-Walton/Info-Security" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Inspect Source</a>
-          </div>
+      <details class="project-entry">
+        <summary>
+          <span class="project-summary">
+            <span class="project-summary-title" role="heading" aria-level="2">Information Security</span>
+            <span class="project-summary-description">Defensive controls and labs.</span>
+          </span>
+          <span class="project-toggle"><span class="project-toggle-label" data-disclosure-label>Explore</span><span class="disclosure-mark" aria-hidden="true"></span></span>
+        </summary>
+        <div class="project-detail">
+          <p>Security auditing scripts, vulnerability mitigation workflows, and penetration frameworks.</p>
+          <a class="inline-action" href="https://github.com/Ethan-Walton/Info-Security" target="_blank" rel="noopener noreferrer">View the Info-Security repository <span class="action-arrow" aria-hidden="true"></span></a>
         </div>
-      </div>
-    </div>
+      </details>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 ETHAN WALTON // ALL RIGHTS RESERVED</p>
+  <footer class="site-footer">
+    <p>&copy; 2026 Ethan Walton. All rights reserved.</p>
+    <a class="footer-link" href="contact.html">Get in touch</a>
   </footer>
-
+  <span class="visually-hidden" data-theme-announcement aria-live="polite"></span>
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,50 +1,66 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ethan Walton // Resume</title>
+  <meta name="description" content="Review or download Ethan Walton's resume.">
+  <meta name="theme-color" content="#090a12">
+  <title>Resume | Ethan Walton</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header>
-    <nav aria-label="Primary navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="resume.html" class="active" aria-current="page">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="controls">
-      <button id="theme-btn" type="button">Switch theme</button>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="index.html" aria-label="Ethan Walton, home">
+        <span class="brand-mark" aria-hidden="true">EW</span>
+        <span class="brand-copy">
+          <span class="brand-name">Ethan Walton</span>
+          <span class="brand-description">Professional portfolio</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html" aria-current="page">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme">
+        <span class="theme-indicator" aria-hidden="true"></span>
+        <span data-theme-label>Light theme</span>
+      </button>
     </div>
+    <div class="scroll-current" aria-hidden="true"><span></span></div>
   </header>
 
-  <main>
-    <h1>Resume</h1>
-  <p class="subtitle">Professional experience and leadership credentials.</p>
+  <main class="site-main page-main" id="main">
+    <header class="page-intro">
+      <h1 class="page-title">Resume</h1>
+      <p class="page-lede">Professional experience and leadership credentials.</p>
+    </header>
 
-  <div class="action-row" style="margin-bottom: 1.5rem;">
-    <a href="resume.pdf" class="btn btn-primary" download="Ethan_Walton_Resume.pdf">Download Resume</a>
-  </div>
-
-  <div class="pdf-viewer">
-    <object data="resume.pdf#view=FitH" type="application/pdf">
-      <iframe src="resume.pdf#view=FitH" title="Ethan Walton Resume"></iframe>
-      <p style="padding:1.5rem;">Your browser can't display the PDF inline. <a href="resume.pdf">Open it directly</a> or use the download button above.</p>
-    </object>
-  </div>
+    <section aria-labelledby="resume-preview-title">
+      <div class="resume-actions">
+        <h2 id="resume-preview-title">Preview the resume</h2>
+        <a class="button button-primary" href="resume.pdf" download="Ethan_Walton_Resume.pdf">Download resume <span class="action-arrow" aria-hidden="true"></span></a>
+      </div>
+      <div class="pdf-viewer">
+        <object data="resume.pdf#view=FitH" type="application/pdf" aria-label="Ethan Walton's resume">
+          <iframe src="resume.pdf#view=FitH" title="Ethan Walton's resume"></iframe>
+          <p class="pdf-fallback">Your browser can't display the PDF inline. <a href="resume.pdf">Open the resume directly</a> or use the download button above.</p>
+        </object>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 ETHAN WALTON // ALL RIGHTS RESERVED</p>
+  <footer class="site-footer">
+    <p>&copy; 2026 Ethan Walton. All rights reserved.</p>
+    <a class="footer-link" href="contact.html">Get in touch</a>
   </footer>
-
+  <span class="visually-hidden" data-theme-announcement aria-live="polite"></span>
   <script src="script.js"></script>
 </body>
-
 </html>
